@@ -1100,20 +1100,15 @@ const barIO = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-group').forEach(g => barIO.observe(g));
 
 /* ── CONTACT FORM ── */
-function handleForm() {
-  const name  = document.getElementById('f-name').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  const msg   = document.getElementById('f-msg').value.trim();
-  if (!name || !email || !msg) { alert('Please fill in all fields.'); return; }
-  const mailto = `mailto:ayushkumarpatel46@gmail.com?subject=Portfolio Enquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg + '\n\nFrom: ' + name + '\nEmail: ' + email)}`;
-  window.location.href = mailto;
-  document.getElementById('form-success').style.display = 'block';
-}
 <script>
 document.getElementById("contact-form").addEventListener("submit", function() {
-    setTimeout(() => {
-        this.reset();
-    }, 1000);
+
+    const form = this;
+
+    setTimeout(function() {
+        form.reset();
+    }, 3000);
+
 });
 </script>
 </body>
