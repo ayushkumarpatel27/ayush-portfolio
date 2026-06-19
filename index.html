@@ -999,12 +999,16 @@ Completed hospital pharmacy training at Metro Hospital & Heart Institute, gainin
   type="hidden"
   name="_next"
   value="https://ayushkumarpatel27.github.io/ayush-portfolio/thankyou.html">
+
+       <input
+type="hidden"
+name="_subject"
+value="New Portfolio Contact Form Submission">
        
         <button type="submit" class="form-btn">
   Send Message
 </button>
-        <div class="form-success" id="form-success">✓ Message noted! Open mailto link to send.</div>
-      </div>
+      
     </div>
   </div>
 </section>
@@ -1100,7 +1104,6 @@ const barIO = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-group').forEach(g => barIO.observe(g));
 
 /* ── CONTACT FORM ── */
-<script>
 document.getElementById("contact-form").addEventListener("submit", function() {
 
     const form = this;
@@ -1110,6 +1113,5 @@ document.getElementById("contact-form").addEventListener("submit", function() {
     }, 3000);
 
 });
-</script>
 </body>
 </html>
