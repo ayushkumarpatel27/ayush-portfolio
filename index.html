@@ -966,20 +966,43 @@ Completed hospital pharmacy training at Metro Hospital & Heart Institute, gainin
           </a>
         </div>
       </div>
-      <div class="contact-form-block reveal">
+      <form
+  action="https://formspree.io/f/mqeovrdq"
+  method="POST">
         <div class="form-row">
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" id="f-name" placeholder="e.g. Priya Sharma" />
+          <input type="text"
+       name="name"
+       class="form-input"
+       id="f-name"
+       placeholder="e.g. Priya Sharma" />
         </div>
         <div class="form-row">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" id="f-email" placeholder="you@example.com" />
+          <input type="email"
+       name="email"
+       class="form-input"
+       id="f-email"
+       placeholder="you@example.com" />
+
         </div>
         <div class="form-row">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" id="f-msg" placeholder="Tell me about the opportunity or collaboration…"></textarea>
+          <textarea
+       name="message"
+       class="form-textarea"
+       id="f-msg"
+       placeholder="Tell me about the opportunity or collaboration"></textarea>
         </div>
-        <button class="form-btn" onclick="handleForm()">Send Message</button>
+
+       <input
+  type="hidden"
+  name="_next"
+  value="https://ayushkumarpatel27.github.io/ayush-portfolio/thankyou.html">
+       
+        <button type="submit" class="form-btn">
+  Send Message
+</button>
         <div class="form-success" id="form-success">✓ Message noted! Open mailto link to send.</div>
       </div>
     </div>
