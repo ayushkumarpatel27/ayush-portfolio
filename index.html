@@ -244,6 +244,59 @@
   .edu-score { color: var(--amber); font-weight: 600; }
 
   /* ── PROJECTS ── */
+ #featured-project {
+  background: var(--bg-dark);
+}
+
+.featured-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--amber);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.featured-badge {
+  display: inline-block;
+  background: rgba(232,160,32,.15);
+  color: var(--amber);
+  padding: .45rem .9rem;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  margin-bottom: 1rem;
+}
+
+.featured-desc {
+  color: #BDD0DC;
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+}
+
+.featured-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 1rem;
+}
+
+.highlight-box {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.highlight-box strong {
+  display: block;
+  color: var(--teal);
+  margin-bottom: .4rem;
+}
+
+.highlight-box span {
+  color: var(--text-light);
+  font-size: .88rem;
+}
   #projects { background: #0C2837; }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.4rem; }
   .project-card {
@@ -286,13 +339,15 @@
     text-transform: uppercase; color: var(--amber); margin-bottom: 1rem;
   }
   .skill-item {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: .7rem;
-  }
-  .skill-item:last-child { margin-bottom: 0; }
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+}
   .skill-name { font-size: .88rem; color: #C8DADF; }
-  .skill-bar-wrap { flex: 1; margin-left: 1rem; height: 4px; background: rgba(255,255,255,.08); border-radius: 2px; }
-  .skill-bar { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--teal), var(--amber)); transition: width 1.2s ease; width: 0; }
+  .skill-bar-wrap {  display: none; }
+  .skill-bar {  display: none; }
 
   /* ── PUBLICATION ── */
   #achievements { background: #0C2837; }
@@ -428,6 +483,7 @@
     <li><a href="#about" onclick="closeNav()">About</a></li>
     <li><a href="#experience" onclick="closeNav()">Experience</a></li>
     <li><a href="#education" onclick="closeNav()">Education</a></li>
+    <li><a href="#featured-project">Featured</a></li>
     <li><a href="#projects" onclick="closeNav()">Projects</a></li>
     <li><a href="#skills" onclick="closeNav()">Skills</a></li>
     <li><a href="#achievements" onclick="closeNav()">Achievements</a></li>
@@ -448,8 +504,8 @@
    <p class="hero-title">
 Healthcare Research Analyst · Pharmacovigilance · Medical Writing
 </p>
-   <p class="hero-summary">
-Final-year B.Pharm graduate from DIT University with experience in pharmaceutical manufacturing, clinical pharmacy, pharmacovigilance research, and medical writing. Published patent holder and developer of VigiTrack 2.0, an AI-driven infovigilance platform for early vaccine safety signal detection. Interested in healthcare research, pharmacovigilance, medical communications, and pharmaceutical market research.
+  <p class="hero-summary">
+B.Pharm graduate from DIT University with hands-on exposure to pharmaceutical manufacturing, hospital pharmacy operations, healthcare research, and medical writing. Published patent holder and creator of VigiTrack 2.0, an AI-driven pharmacovigilance project for early vaccine safety signal detection. Experienced in literature review, scientific documentation, data interpretation, and healthcare research methodologies. Passionate about transforming scientific information into actionable insights and pursuing a career in healthcare research, pharmacovigilance, and medical communications.
 </p>
      <div class="hero-contact">
   <p>📧 your-ayushkumarpatel46@gmail.com</p>
@@ -535,19 +591,15 @@ Final-year B.Pharm graduate from DIT University with experience in pharmaceutica
           <div class="tl-date">Jun 2025 – Jul 2025</div>
         </div>
         <p class="tl-desc">
-          Worked in a GMP-compliant pharmaceutical plant gaining hands-on experience in sterile production
-          of injectable dosage forms. Assisted in formulation, filtration, aseptic filling, and packaging
-          operations while adhering to cleanroom protocols. Supported in-process quality checks, batch
-          documentation, and validation activities. Developed practical skills in equipment handling,
-          regulatory compliance, and aseptic techniques.
-        </p>
-        <div class="tag-row">
-          <span class="tag">GMP</span>
-          <span class="tag">Aseptic Techniques</span>
-          <span class="tag">QC</span>
-          <span class="tag">Sterile Manufacturing</span>
-          <span class="tag">Documentation</span>
-        </div>
+Undertook industrial training at Akums Drugs & Pharmaceuticals Ltd., gaining practical exposure to sterile manufacturing operations, GMP-compliant production processes, quality assurance systems, batch manufacturing documentation, and pharmaceutical production workflows. Observed large-scale manufacturing practices used in regulated pharmaceutical environments.
+</p>
+
+<div class="tag-row">
+  <span class="tag">GMP</span>
+  <span class="tag">Sterile Manufacturing</span>
+  <span class="tag">Quality Assurance</span>
+  <span class="tag">Production</span>
+</div>
       </div>
 
       <div class="timeline-item reveal">
@@ -560,20 +612,63 @@ Final-year B.Pharm graduate from DIT University with experience in pharmaceutica
           <div class="tl-date">Jun 2024 – Jun 2024</div>
         </div>
         <p class="tl-desc">
-          Gained hands-on experience in both inpatient (IPD) and outpatient (OPD) pharmacy operations.
-          Trained in medication dispensing, prescription handling, and patient counselling, along with
-          pharmaceutical store management including inventory control, stock maintenance, and procurement
-          processes. Developed practical understanding of medication management systems and workflow
-          coordination in a clinical setting.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Medication Dispensing</span>
-          <span class="tag">Inventory Control</span>
-          <span class="tag">Patient Counselling</span>
-          <span class="tag">IPD/OPD</span>
-          <span class="tag">Prescription Handling</span>
-        </div>
+Completed hospital pharmacy training at Metro Hospital & Heart Institute, gaining exposure to medication dispensing, prescription handling, inventory management, and patient-care pharmacy operations. Worked across indoor and outdoor pharmacy services while observing medication reconciliation, drug storage practices, and pharmaceutical procurement systems.
+</p>
+
+<div class="tag-row">
+  <span class="tag">Hospital Pharmacy</span>
+  <span class="tag">Medication Dispensing</span>
+  <span class="tag">Inventory Management</span>
+  <span class="tag">Patient Care</span>
+</div>
       </div>
+     <div class="timeline-item reveal">
+
+  <div class="timeline-dot"></div>
+
+  <div class="tl-header">
+    <div>
+      <div class="tl-role">Research Project Lead</div>
+      <div class="tl-org">VigiTrack 2.0</div>
+    </div>
+    <div class="tl-date">2025 – 2026</div>
+  </div>
+
+  <p class="tl-desc">
+    Designed and developed VigiTrack 2.0, an AI-driven infovigilance platform for early vaccine safety signal detection. Conducted literature review, pharmacovigilance research, adverse-event monitoring workflow design, and NLP-based mapping of social-media terminology to standardized medical coding systems including MedDRA, ICD-10, and SNOMED CT.
+  </p>
+
+  <div class="tag-row">
+    <span class="tag">Pharmacovigilance</span>
+    <span class="tag">Research</span>
+    <span class="tag">NLP</span>
+    <span class="tag">Signal Detection</span>
+  </div>
+
+</div>
+     <div class="timeline-item reveal">
+
+  <div class="timeline-dot"></div>
+
+  <div class="tl-header">
+    <div>
+      <div class="tl-role">Published Patent Holder</div>
+      <div class="tl-org">Polymer-Based Wound Healing Innovation</div>
+    </div>
+    <div class="tl-date">2025</div>
+  </div>
+
+  <p class="tl-desc">
+    Contributed to the development and publication of a patent focused on polymer-based wound healing technology. Participated in formulation concepts, literature review, and scientific documentation supporting innovation in pharmaceutical wound-care applications.
+  </p>
+
+  <div class="tag-row">
+    <span class="tag">Patent</span>
+    <span class="tag">Research</span>
+    <span class="tag">Scientific Writing</span>
+  </div>
+
+</div>
     </div>
   </div>
 </section>
@@ -613,6 +708,60 @@ Final-year B.Pharm graduate from DIT University with experience in pharmaceutica
 </section>
 
 <!-- PROJECTS -->
+ <section id="featured-project">
+  <div class="section-inner">
+
+    <div class="section-label">Featured Research Project</div>
+
+    <h2 class="section-title">
+      VigiTrack 2.0
+    </h2>
+
+    <div class="featured-card">
+
+      <div class="featured-badge">
+        Final Year Research Project: An AI-Driven Pharmacovigilance Platform
+      </div>
+
+      <p class="featured-desc">
+        VigiTrack 2.0 is an infovigilance-based early signal detection system
+        designed for monitoring adverse events associated with next-generation
+        vaccines through social media intelligence.
+
+        The platform utilizes Natural Language Processing (NLP), contextual
+        filtering, sentiment analysis, and medical terminology mapping to
+        identify potential safety signals before they are captured through
+        traditional pharmacovigilance channels.
+      </p>
+
+      <div class="featured-highlights">
+
+        <div class="highlight-box">
+          <strong>Research Area</strong>
+          <span>Pharmacovigilance & Infovigilance</span>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Technologies</strong>
+          <span>NLP, AI, Signal Detection</span>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Application</strong>
+          <span>Vaccine Safety Monitoring</span>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Medical Standards</strong>
+          <span>MedDRA, ICD-10, SNOMED CT</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 <section id="projects">
   <div class="section-inner">
     <div class="section-label">Research Work</div>
@@ -680,28 +829,65 @@ Final-year B.Pharm graduate from DIT University with experience in pharmaceutica
     <div class="skills-grid">
       <div class="skill-group reveal">
         <div class="skill-group-title">Pharmaceutical Sciences</div>
-        <div class="skill-item"><span class="skill-name">GMP &amp; Quality Control</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Sterile Manufacturing</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Drug Formulation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Pharmacovigilance</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div></div>
-        <div class="skill-item"><span class="skill-name">NDDS</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div></div>
-      </div>
-      <div class="skill-group reveal">
-        <div class="skill-group-title">Research &amp; Analysis</div>
-        <div class="skill-item"><span class="skill-name">Statistical Data Analysis</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Report &amp; Article Writing</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Data Collection</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Chemdraw</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Signal Detection</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div></div>
+        <div class="skill-item"><span class="skill-name">GMP &amp; Quality Control</span></div>
+        <div class="skill-item"><span class="skill-name">Sterile Manufacturing</span></div>
+        <div class="skill-item"><span class="skill-name">Drug Formulation</span></div>
+        <div class="skill-item"><span class="skill-name">NDDS</span></div>
       </div>
       <div class="skill-group reveal">
         <div class="skill-group-title">Soft Skills</div>
-        <div class="skill-item"><span class="skill-name">Teamwork &amp; Leadership</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Communication</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Problem-Solving</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Time Management</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Documentation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="87"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Teamwork &amp; Leadership</span></div>
+        <div class="skill-item"><span class="skill-name">Communication</span></div>
+        <div class="skill-item"><span class="skill-name">Problem-Solving</span></div>
+        <div class="skill-item"><span class="skill-name">Time Management</span></div>
+        <div class="skill-item"><span class="skill-name">Documentation</span></div>
       </div>
+     <div class="skill-group">
+  <div class="skill-group-title">Pharmaceutical Research</div>
+
+  <div class="skill-item"><span class="skill-name">Literature Review</span></div>
+  <div class="skill-item"><span class="skill-name">Research Methodology</span></div>
+  <div class="skill-item"><span class="skill-name">Scientific Documentation</span></div>
+  <div class="skill-item"><span class="skill-name">Data Interpretation</span></div>
+  <div class="skill-item"><span class="skill-name">Survey Design</span></div>
+</div>
+     <div class="skill-group">
+  <div class="skill-group-title">Pharmacovigilance</div>
+
+  <div class="skill-item"><span class="skill-name">Adverse Event Reporting</span></div>
+  <div class="skill-item"><span class="skill-name">Signal Detection</span></div>
+  <div class="skill-item"><span class="skill-name">Drug Safety Monitoring</span></div>
+  <div class="skill-item"><span class="skill-name">MedDRA Mapping</span></div>
+  <div class="skill-item"><span class="skill-name">Infovigilance</span></div>
+</div>
+     <div class="skill-group">
+  <div class="skill-group-title">Medical Writing</div>
+
+  <div class="skill-item"><span class="skill-name">Literature Summaries</span></div>
+  <div class="skill-item"><span class="skill-name">Scientific Writing</span></div>
+  <div class="skill-item"><span class="skill-name">Research Reports</span></div>
+  <div class="skill-item"><span class="skill-name">Publication Support</span></div>
+  <div class="skill-item"><span class="skill-name">Technical Documentation</span></div>
+</div>
+     <div class="skill-group">
+  <div class="skill-group-title">Tools & Software</div>
+
+  <div class="skill-item"><span class="skill-name">Microsoft Excel</span></div>
+  <div class="skill-item"><span class="skill-name">SPSS</span></div>
+  <div class="skill-item"><span class="skill-name">Minitab</span></div>
+  <div class="skill-item"><span class="skill-name">PubMed</span></div>
+  <div class="skill-item"><span class="skill-name">ChemDraw</span></div>
+  <div class="skill-item"><span class="skill-name">Google Scholar</span></div>
+</div>
+     <div class="skill-group">
+  <div class="skill-group-title">Healthcare Market Research</div>
+
+  <div class="skill-item"><span class="skill-name">Secondary Research</span></div>
+  <div class="skill-item"><span class="skill-name">Competitive Analysis</span></div>
+  <div class="skill-item"><span class="skill-name">Data Collection</span></div>
+  <div class="skill-item"><span class="skill-name">Report Preparation</span></div>
+  <div class="skill-item"><span class="skill-name">Healthcare Trends Analysis</span></div>
+</div>
     </div>
   </div>
 </section>
@@ -775,20 +961,29 @@ Final-year B.Pharm graduate from DIT University with experience in pharmaceutica
           </a>
         </div>
       </div>
-      <div class="contact-form-block reveal">
+      <form
+  action="https://formspree.io/f/mqeovrdq"
+  method="POST">
         <div class="form-row">
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" id="f-name" placeholder="e.g. Priya Sharma" />
+          <input type="text" name="name" class="form-input" id="f-name" placeholder="e.g. Priya Sharma" />
         </div>
         <div class="form-row">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" id="f-email" placeholder="you@example.com" />
+          <input type="email" name="email" class="form-input" id="f-email" placeholder="you@example.com" />
         </div>
         <div class="form-row">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" id="f-msg" placeholder="Tell me about the opportunity or collaboration…"></textarea>
+          <textarea name="message" class="form-textarea" id="f-msg" placeholder="Tell me about the opportunity or collaboration…"></textarea>
         </div>
-        <button class="form-btn" onclick="handleForm()">Send Message</button>
+       <input
+  type="hidden"
+  name="_next"
+  value="https://ayushkumarpatel27.github.io/ayush-portfolio/thankyou.html">
+
+       <button type="submit" class="form-btn">
+  Send Message
+</button>
         <div class="form-success" id="form-success">✓ Message noted! Open mailto link to send.</div>
       </div>
     </div>
