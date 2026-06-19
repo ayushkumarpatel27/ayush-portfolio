@@ -244,6 +244,59 @@
   .edu-score { color: var(--amber); font-weight: 600; }
 
   /* ── PROJECTS ── */
+ #featured-project {
+  background: var(--bg-dark);
+}
+
+.featured-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--amber);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.featured-badge {
+  display: inline-block;
+  background: rgba(232,160,32,.15);
+  color: var(--amber);
+  padding: .45rem .9rem;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  margin-bottom: 1rem;
+}
+
+.featured-desc {
+  color: #BDD0DC;
+  line-height: 1.9;
+  margin-bottom: 1.8rem;
+}
+
+.featured-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 1rem;
+}
+
+.highlight-box {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.highlight-box strong {
+  display: block;
+  color: var(--teal);
+  margin-bottom: .4rem;
+}
+
+.highlight-box span {
+  color: var(--text-light);
+  font-size: .88rem;
+}
   #projects { background: #0C2837; }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.4rem; }
   .project-card {
@@ -428,6 +481,7 @@
     <li><a href="#about" onclick="closeNav()">About</a></li>
     <li><a href="#experience" onclick="closeNav()">Experience</a></li>
     <li><a href="#education" onclick="closeNav()">Education</a></li>
+    <li><a href="#featured-project">Featured</a></li>
     <li><a href="#projects" onclick="closeNav()">Projects</a></li>
     <li><a href="#skills" onclick="closeNav()">Skills</a></li>
     <li><a href="#achievements" onclick="closeNav()">Achievements</a></li>
@@ -613,6 +667,60 @@ Final-year B.Pharm graduate from DIT University with experience in pharmaceutica
 </section>
 
 <!-- PROJECTS -->
+ <section id="featured-project">
+  <div class="section-inner">
+
+    <div class="section-label">Featured Research Project</div>
+
+    <h2 class="section-title">
+      VigiTrack 2.0
+    </h2>
+
+    <div class="featured-card">
+
+      <div class="featured-badge">
+         Final Year Research Project AI-Driven Pharmacovigilance Platform
+      </div>
+
+      <p class="featured-desc">
+        VigiTrack 2.0 is an infovigilance-based early signal detection system
+        designed for monitoring adverse events associated with next-generation
+        vaccines through social media intelligence.
+
+        The platform utilizes Natural Language Processing (NLP), contextual
+        filtering, sentiment analysis, and medical terminology mapping to
+        identify potential safety signals before they are captured through
+        traditional pharmacovigilance channels.
+      </p>
+
+      <div class="featured-highlights">
+
+        <div class="highlight-box">
+          <strong>Research Area</strong>
+          <span>Pharmacovigilance & Infovigilance</span>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Technologies</strong>
+          <span>NLP, AI, Signal Detection</span>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Application</strong>
+          <span>Vaccine Safety Monitoring</span>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Medical Standards</strong>
+          <span>MedDRA, ICD-10, SNOMED CT</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 <section id="projects">
   <div class="section-inner">
     <div class="section-label">Research Work</div>
