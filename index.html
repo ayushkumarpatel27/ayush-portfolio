@@ -507,7 +507,7 @@
 Healthcare Research Analyst · Pharmacovigilance · Medical Writing
 </p>
     <p class="hero-summary">
-Final-year B.Pharm graduate from DIT University with experience in pharmaceutical manufacturing, clinical pharmacy, pharmacovigilance research, and medical writing. Published patent holder and developer of VigiTrack 2.0, an AI-driven infovigilance platform for early vaccine safety signal detection. Interested in healthcare research, pharmacovigilance, medical communications, and pharmaceutical market research.
+B.Pharm graduate from DIT University with hands-on exposure to pharmaceutical manufacturing, hospital pharmacy operations, healthcare research, and medical writing. Published patent holder and creator of VigiTrack 2.0, an AI-driven pharmacovigilance project for early vaccine safety signal detection. Experienced in literature review, scientific documentation, data interpretation, and healthcare research methodologies. Passionate about transforming scientific information into actionable insights and pursuing a career in healthcare research, pharmacovigilance, and medical communications.
 </p>
      <div class="hero-contact">
   <p>📧 ayushkumarpatel46@gmail.com</p>
@@ -966,7 +966,7 @@ Completed hospital pharmacy training at Metro Hospital & Heart Institute, gainin
           </a>
         </div>
       </div>
-      <form
+      <form id="contact-form"
   action="https://formspree.io/f/mqeovrdq"
   method="POST">
         <div class="form-row">
@@ -1109,6 +1109,12 @@ function handleForm() {
   window.location.href = mailto;
   document.getElementById('form-success').style.display = 'block';
 }
+<script>
+document.getElementById("contact-form").addEventListener("submit", function() {
+    setTimeout(() => {
+        this.reset();
+    }, 1000);
+});
 </script>
 </body>
 </html>
