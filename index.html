@@ -339,13 +339,17 @@
     text-transform: uppercase; color: var(--amber); margin-bottom: 1rem;
   }
   .skill-item {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: .7rem;
-  }
-  .skill-item:last-child { margin-bottom: 0; }
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+}
   .skill-name { font-size: .88rem; color: #C8DADF; }
-  .skill-bar-wrap { flex: 1; margin-left: 1rem; height: 4px; background: rgba(255,255,255,.08); border-radius: 2px; }
-  .skill-bar { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--teal), var(--amber)); transition: width 1.2s ease; width: 0; }
+  ..skill-bar-wrap {
+    display: none;
+}
+  .skill-bar { display: none; }
 
   /* ── PUBLICATION ── */
   #achievements { background: #0C2837; }
@@ -829,28 +833,66 @@ Completed hospital pharmacy training at Metro Hospital & Heart Institute, gainin
     <div class="skills-grid">
       <div class="skill-group reveal">
         <div class="skill-group-title">Pharmaceutical Sciences</div>
-        <div class="skill-item"><span class="skill-name">GMP &amp; Quality Control</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Sterile Manufacturing</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Drug Formulation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Pharmacovigilance</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div></div>
-        <div class="skill-item"><span class="skill-name">NDDS</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div></div>
+        <div class="skill-item"><span class="skill-name">GMP &amp; Quality Control</span></div>
+        <div class="skill-item"><span class="skill-name">Sterile Manufacturing</span></div>
+        <div class="skill-item"><span class="skill-name">Drug Formulation</span></div>
+        <div class="skill-item"><span class="skill-name">NDDS</span></div>
       </div>
-      <div class="skill-group reveal">
-        <div class="skill-group-title">Research &amp; Analysis</div>
-        <div class="skill-item"><span class="skill-name">Statistical Data Analysis</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Report &amp; Article Writing</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Data Collection</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Chemdraw</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Signal Detection</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div></div>
-      </div>
+   
       <div class="skill-group reveal">
         <div class="skill-group-title">Soft Skills</div>
-        <div class="skill-item"><span class="skill-name">Teamwork &amp; Leadership</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Communication</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Problem-Solving</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Time Management</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
-        <div class="skill-item"><span class="skill-name">Documentation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="87"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Teamwork &amp; Leadership</span></div>
+        <div class="skill-item"><span class="skill-name">Communication</span></div>
+        <div class="skill-item"><span class="skill-name">Problem-Solving</span></div>
+        <div class="skill-item"><span class="skill-name">Time Management</span></div>
+        <div class="skill-item"><span class="skill-name">Documentation</span></div>
       </div>
+     <div class="skill-group reveal">
+  <div class="skill-group-title">Pharmaceutical Research</div>
+
+  <div class="skill-item"><span class="skill-name">Literature Review</span></div>
+  <div class="skill-item"><span class="skill-name">Research Methodology</span></div>
+  <div class="skill-item"><span class="skill-name">Scientific Documentation</span></div>
+  <div class="skill-item"><span class="skill-name">Data Interpretation</span></div>
+  <div class="skill-item"><span class="skill-name">Survey Design</span></div>
+</div>
+     <div class="skill-group reveal">
+  <div class="skill-group-title">Pharmacovigilance</div>
+
+  <div class="skill-item"><span class="skill-name">Adverse Event Reporting</span></div>
+  <div class="skill-item"><span class="skill-name">Signal Detection</span></div>
+  <div class="skill-item"><span class="skill-name">Drug Safety Monitoring</span></div>
+  <div class="skill-item"><span class="skill-name">MedDRA Mapping</span></div>
+  <div class="skill-item"><span class="skill-name">Infovigilance</span></div>
+</div>
+     <div class="skill-group reveal">
+  <div class="skill-group-title">Medical Writing</div>
+
+  <div class="skill-item"><span class="skill-name">Literature Summaries</span></div>
+  <div class="skill-item"><span class="skill-name">Scientific Writing</span></div>
+  <div class="skill-item"><span class="skill-name">Research Reports</span></div>
+  <div class="skill-item"><span class="skill-name">Publication Support</span></div>
+  <div class="skill-item"><span class="skill-name">Technical Documentation</span></div>
+</div>
+     <div class="skill-group reveal">
+  <div class="skill-group-title">Tools & Software</div>
+
+  <div class="skill-item"><span class="skill-name">Microsoft Excel</span></div>
+  <div class="skill-item"><span class="skill-name">SPSS</span></div>
+  <div class="skill-item"><span class="skill-name">Minitab</span></div>
+  <div class="skill-item"><span class="skill-name">PubMed</span></div>
+  <div class="skill-item"><span class="skill-name">Chemdraw</span></div>
+  <div class="skill-item"><span class="skill-name">Google Scholar</span></div>
+</div>
+     <div class="skill-group reveal">
+  <div class="skill-group-title">Healthcare Market Research</div>
+
+  <div class="skill-item"><span class="skill-name">Secondary Research</span></div>
+  <div class="skill-item"><span class="skill-name">Competitive Analysis</span></div>
+  <div class="skill-item"><span class="skill-name">Data Collection</span></div>
+  <div class="skill-item"><span class="skill-name">Report Preparation</span></div>
+  <div class="skill-item"><span class="skill-name">Healthcare Trends Analysis</span></div>
+</div>
     </div>
   </div>
 </section>
